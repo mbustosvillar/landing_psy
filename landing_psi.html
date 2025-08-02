@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martín Bustos Villar – Psiquiatría Integral</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Neutrals -->
+    <!-- Application Structure Plan: Se ha diseñado una página de desplazamiento vertical única que guía al usuario a través de un viaje lógico: 1) Introducción y llamado a la acción principal (Hero). 2) Explicación del enfoque terapéutico para generar confianza (Mi Enfoque). 3) Guía paso a paso para agendar una cita, reduciendo la incertidumbre (Proceso de Consulta). 4) Una sección de Preguntas Frecuentes interactiva para resolver dudas comunes de forma proactiva (FAQ). 5) Pie de página con información de contacto y detalles legales (Footer). Esta estructura se eligió para transformar el texto informativo en una narrativa persuasiva y clara, priorizando la facilidad de uso y la conversión (agendar una cita). -->
+    <!-- Visualization & Content Choices: Report Info: Enfoque terapéutico -> Goal: Organizar/Informar -> Viz/Method: Columnas con íconos (HTML/CSS) -> Interaction: Ninguna, la claridad visual es suficiente. Justification: Divide conceptos complejos en partes digeribles. | Report Info: Información importante -> Goal: Clarificar/Informar -> Viz/Method: Acordeón interactivo (FAQ) -> Interaction: Clic para expandir/colapsar respuestas -> Justification: Mantiene la interfaz limpia y permite al usuario enfocarse en sus dudas específicas. Library: Vanilla JS. | Report Info: Agendar turno -> Goal: Convertir -> Viz/Method: Botón de llamado a la acción prominente -> Interaction: Clic que dirige a Calendly. Justification: Es el objetivo principal de la página, debe ser visible y fácil de usar. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .faq-answer {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .icon-shape {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F7F4] text-slate-700">
+
+    <main class="container mx-auto px-6 py-12 md:py-20 max-w-4xl">
+
+        <header class="text-center mb-16 md:mb-24">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Martín Bustos Villar</h1>
+            <p class="text-xl text-slate-600 mb-8">Psiquiatría Integral – Médico Residente</p>
+            <p class="max-w-2xl mx-auto mb-8">
+                Mi compromiso es brindarte un acompañamiento terapéutico integral y personalizado. Mi enfoque se centra en tu bienestar, en un marco de confidencialidad absoluta.
+            </p>
+            <a href="https://calendly.com/" target="_blank" class="inline-block bg-[#5A8F7B] text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-[#4a7a67] transition-colors duration-300 text-lg">
+                ➡️ Solicitar Consulta
+            </a>
+        </header>
+
+        <section id="enfoque" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Mi Enfoque Terapéutico</h2>
+                <p class="mt-4 max-w-xl mx-auto">Mi práctica se basa en tres pilares fundamentales para asegurar un tratamiento completo y adaptado a tus necesidades.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white/50 p-6 rounded-xl shadow-sm">
+                    <div class="icon-shape bg-[#E3F0EB] mx-auto mb-4">
+                         <span class="text-3xl text-[#5A8F7B]">💬</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-800">Evaluación Clínica</h3>
+                    <p>Una entrevista profunda para comprender tu situación particular y definir juntos el mejor camino a seguir.</p>
+                </div>
+                <div class="bg-white/50 p-6 rounded-xl shadow-sm">
+                    <div class="icon-shape bg-[#E3F0EB] mx-auto mb-4">
+                        <span class="text-3xl text-[#5A8F7B]">➕</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-800">Seguimiento Farmacológico</h3>
+                    <p>Un acompañamiento cuidadoso y actualizado, cuando sea necesario, para potenciar tu bienestar emocional.</p>
+                </div>
+                <div class="bg-white/50 p-6 rounded-xl shadow-sm">
+                    <div class="icon-shape bg-[#E3F0EB] mx-auto mb-4">
+                        <span class="text-3xl text-[#5A8F7B]">🧠</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-800">Psicoeducación</h3>
+                    <p>Te brindo herramientas e información para que comprendas mejor tus procesos y participes activamente en tu recuperación.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proceso" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Proceso de Consulta</h2>
+                <p class="mt-4 max-w-xl mx-auto">Agendar tu primera entrevista es un proceso simple y directo. Aquí te explico cómo funciona.</p>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <div class="flex items-start mb-8">
+                    <div class="flex items-center justify-center bg-[#5A8F7B] text-white w-10 h-10 rounded-full font-bold text-xl mr-6 flex-shrink-0">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1 text-slate-800">Elige tu modalidad</h3>
+                        <p>Las consultas duran 30 minutos. Puedes optar por una sesión <strong>presencial</strong> en mi consultorio de CABA o <strong>virtual</strong> por videollamada, según tu comodidad.</p>
+                    </div>
+                </div>
+                <div class="flex items-start mb-8">
+                    <div class="flex items-center justify-center bg-[#5A8F7B] text-white w-10 h-10 rounded-full font-bold text-xl mr-6 flex-shrink-0">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1 text-slate-800">Agenda tu turno</h3>
+                        <p>Haz clic en el enlace de Calendly para ver mis horarios disponibles y reservar el que mejor se ajuste a tu agenda. La gestión es 100% online.</p>
+                         <a href="https://calendly.com/" target="_blank" class="text-[#5A8F7B] font-semibold hover:underline mt-2 inline-block">Agendar ahora →</a>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex items-center justify-center bg-[#5A8F7B] text-white w-10 h-10 rounded-full font-bold text-xl mr-6 flex-shrink-0">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1 text-slate-800">Recibe la confirmación</h3>
+                        <p>Una vez confirmada la reserva, recibirás un correo electrónico con todos los detalles y las instrucciones para nuestra sesión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="max-w-2xl mx-auto mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Preguntas Frecuentes</h2>
+                <p class="mt-4 max-w-xl mx-auto">Aquí resuelvo algunas de las dudas más comunes para tu tranquilidad y claridad.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="faq-item bg-white/50 rounded-lg shadow-sm">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-slate-800">
+                        <span>¿Cuál es el marco de la atención?</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-slate-600">
+                        <p>Mi atención es estrictamente médica, profesional y ética, rigiéndose por las normativas vigentes en Argentina (Ley 17.132). Este es un espacio de psiquiatría clínica y no se ofrecen prácticas espirituales o terapias alternativas.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white/50 rounded-lg shadow-sm">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-slate-800">
+                        <span>¿Cómo se definen los honorarios?</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-slate-600">
+                        <p>Los honorarios se informan de manera personalizada y transparente durante la primera consulta. Se emite el correspondiente comprobante fiscal (factura C) según el régimen de monotributo.</p>
+                    </div>
+                </div>
+                 <div class="faq-item bg-white/50 rounded-lg shadow-sm">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-slate-800">
+                        <span>¿Qué pasa si tengo una consulta administrativa?</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-slate-600">
+                        <p>Para cualquier duda no clínica (ej. sobre facturación o cambios de turno fuera de Calendly), puedes escribirme a mi correo electrónico o usar el formulario de contacto del sitio web. El enlace para agendar es exclusivamente para las consultas médicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center border-t border-slate-200 pt-8">
+            <p class="font-bold text-slate-800">Martín Bustos Villar</p>
+            <p class="text-sm text-slate-500">MN 179308 – Médico Residente de Psiquiatría</p>
+            <p class="text-sm text-slate-500 mt-2">Consultorio en Ciudad Autónoma de Buenos Aires y Atención Virtual</p>
+            <p class="text-sm text-slate-500 mt-4">Para consultas administrativas: <a href="mailto:mbustosvillar@gmail.com" class="font-semibold text-[#5A8F7B] hover:underline">mbustosvillar@gmail.com</a></p>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const arrow = question.querySelector('span:last-child');
+
+                question.addEventListener('click', () => {
+                    const isOpen = answer.classList.contains('open');
+
+                    document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
+                        openAnswer.classList.remove('open');
+                    });
+                     document.querySelectorAll('.faq-question span:last-child').forEach(openArrow => {
+                        openArrow.style.transform = 'rotate(0deg)';
+                    });
+
+                    if (!isOpen) {
+                        answer.classList.add('open');
+                        arrow.style.transform = 'rotate(180deg)';
+                    } else {
+                         arrow.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
