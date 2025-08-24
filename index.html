@@ -106,14 +106,22 @@
 
     <header id="nav-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-fondo/80 shadow-md backdrop-blur-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-4xl">
-            <h4 class="font-display text-2xl font-bold tracking-wider text-color-texto-oscuro">Martín Bustos Villar</h4>
-            <nav role="navigation" aria-label="Menú principal" class="hidden md:flex space-x-8 font-semibold uppercase tracking-wide text-sm text-color-texto-medio">
-                <a href="https://luxanima-tawny.vercel.app/" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la página principal de Lux Anima" target="_blank">Lux Anima</a> <!-- Nuevo enlace a Lux Anima -->
-                <a href="#hero" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de inicio">Inicio</a>
-                <a href="#enfoque" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de mi enfoque">Mi Enfoque</a>
-                <a href="#proceso" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de proceso de consulta">Proceso</a>
-                <a href="#faq" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de preguntas frecuentes">FAQ</a>
-                <a href="#contacto" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de contacto">Contacto</a>
+            <h4 class="font-display text-2xl font-bold tracking-wider text-color-texto-oscuro" data-translate-key="header-title">Martín Bustos Villar</h4>
+            <!-- Se agregó items-center y lang-switcher para los botones de idioma -->
+            <nav role="navigation" aria-label="Menú principal" class="hidden md:flex items-center space-x-8 font-semibold uppercase tracking-wide text-sm text-color-texto-medio">
+                <a href="https://luxanima-tawny.vercel.app/" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la página principal de Lux Anima" target="_blank">Lux Anima</a>
+                <a href="#hero" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de inicio" data-translate-key="nav-home">Inicio</a>
+                <a href="#enfoque" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de mi enfoque" data-translate-key="nav-approach">Mi Enfoque</a>
+                <a href="#proceso" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de proceso de consulta" data-translate-key="nav-process">Proceso</a>
+                <a href="#faq" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de preguntas frecuentes" data-translate-key="nav-faq">FAQ</a>
+                <a href="#contacto" class="nav-link hover:text-color-acento transition-colors" aria-label="Ir a la sección de contacto" data-translate-key="nav-contact">Contacto</a>
+                <!-- Botones para cambiar el idioma -->
+                <div class="lang-switcher flex space-x-2 text-xs">
+                    <button id="lang-es" class="lang-btn font-bold text-color-acento">ES</button>
+                    <button id="lang-en" class="lang-btn hover:text-color-acento transition-colors">EN</button>
+                    <button id="lang-fr" class="lang-btn hover:text-color-acento transition-colors">FR</button>
+                    <button id="lang-pt" class="lang-btn hover:text-color-acento transition-colors">PT</button>
+                </div>
             </nav>
             <!-- Mobile Hamburger Button - Not implemented for simplicity in this standalone page -->
         </div>
@@ -124,12 +132,12 @@
         <!-- Sección Hero (adaptada de la original de Martín Bustos Villar) -->
         <section id="hero" class="text-center mb-16 md:mb-24 pt-20">
             <div class="fade-in">
-                <h1 class="font-display text-4xl md:text-6xl font-bold mb-4 text-color-texto-oscuro">Martín Bustos Villar</h1>
-                <p class="text-xl md:text-2xl mb-8 font-light text-color-texto-medio">Psiquiatría Integral – Médico Residente</p>
-                <p class="max-w-3xl mx-auto mb-12 text-lg leading-relaxed text-color-texto-medio">
+                <h1 class="font-display text-4xl md:text-6xl font-bold mb-4 text-color-texto-oscuro" data-translate-key="hero-title">Martín Bustos Villar</h1>
+                <p class="text-xl md:text-2xl mb-8 font-light text-color-texto-medio" data-translate-key="hero-subtitle">Psiquiatría Integral – Médico Residente</p>
+                <p class="max-w-3xl mx-auto mb-12 text-lg leading-relaxed text-color-texto-medio" data-translate-key="hero-text">
                     Mi compromiso es brindarte un acompañamiento terapéutico integral y personalizado. Mi enfoque se centra en tu bienestar, en un marco de confidencialidad absoluta.
                 </p>
-                <a href="https://calendly.com/mgbustosvillar/30min" target="_blank" class="btn-care-primary fade-in" aria-label="Solicitar Consulta">
+                <a href="https://calendly.com/mgbustosvillar/30min" target="_blank" class="btn-care-primary fade-in" aria-label="Solicitar Consulta" data-translate-key="hero-button">
                     ➡️ Solicitar Consulta
                 </a>
             </div>
@@ -138,30 +146,30 @@
         <!-- Mi Enfoque Terapéutico (adaptado del index.html original) -->
         <section id="enfoque" class="mb-16 md:mb-24">
             <div class="text-center mb-12 fade-in">
-                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Mi Enfoque Terapéutico</h2>
-                <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed">Mi práctica se basa en tres pilares fundamentales para asegurar un tratamiento completo y adaptado a tus necesidades.</p>
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" data-translate-key="focus-title">Mi Enfoque Terapéutico</h2>
+                <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed" data-translate-key="focus-subtitle">Mi práctica se basa en tres pilares fundamentales para asegurar un tratamiento completo y adaptado a tus necesidades.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8 text-center">
                 <div class="care-card fade-in">
                     <div class="icon-shape">
                            <span class="text-3xl text-color-acento">💬</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Evaluación Clínica</h3>
-                    <p class="text-sm">Una entrevista profunda para comprender tu situación particular y definir juntos el mejor camino a seguir.</p>
+                    <h3 class="text-xl font-bold mb-2" data-translate-key="card-1-title">Evaluación Clínica</h3>
+                    <p class="text-sm" data-translate-key="card-1-text">Una entrevista profunda para comprender tu situación particular y definir juntos el mejor camino a seguir.</p>
                 </div>
                 <div class="care-card fade-in">
                     <div class="icon-shape">
                         <span class="text-3xl text-color-acento">➕</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Seguimiento Farmacológico</h3>
-                    <p class="text-sm">Un acompañamiento cuidadoso y actualizado, cuando sea necesario, para potenciar tu bienestar emocional.</p>
+                    <h3 class="text-xl font-bold mb-2" data-translate-key="card-2-title">Seguimiento Farmacológico</h3>
+                    <p class="text-sm" data-translate-key="card-2-text">Un acompañamiento cuidadoso y actualizado, cuando sea necesario, para potenciar tu bienestar emocional.</p>
                 </div>
                 <div class="care-card fade-in">
                     <div class="icon-shape">
                         <span class="text-3xl text-color-acento">🧠</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Psicoeducación</h3>
-                    <p class="text-sm">Te brindo herramientas e información para que comprendas mejor tus procesos y participes activamente en tu recuperación.</p>
+                    <h3 class="text-xl font-bold mb-2" data-translate-key="card-3-title">Psicoeducación</h3>
+                    <p class="text-sm" data-translate-key="card-3-text">Te brindo herramientas e información para que comprendas mejor tus procesos y participes activamente en tu recuperación.</p>
                 </div>
             </div>
         </section>
@@ -169,30 +177,30 @@
         <!-- Proceso de Consulta (adaptado del index.html original) -->
         <section id="proceso" class="mb-16 md:mb-24">
             <div class="text-center mb-12 fade-in">
-                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Proceso de Consulta</h2>
-                <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed">Agendar tu primera entrevista es un proceso simple y directo. Aquí te explico cómo funciona.</p>
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" data-translate-key="process-title">Proceso de Consulta</h2>
+                <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed" data-translate-key="process-subtitle">Agendar tu primera entrevista es un proceso simple y directo. Aquí te explico cómo funciona.</p>
             </div>
             <div class="max-w-2xl mx-auto">
                 <div class="flex items-start mb-8 fade-in">
                     <div class="flex items-center justify-center bg-color-acento text-white w-10 h-10 rounded-full font-bold text-xl mr-6 flex-shrink-0">1</div>
                     <div>
-                        <h3 class="text-xl font-bold mb-1">Elige tu modalidad</h3>
-                        <p>Las consultas duran 30 minutos. Puedes optar por una sesión <strong>presencial</strong> en mi consultorio de CABA o <strong>virtual</strong> por videollamada, según tu comodidad.</p>
+                        <h3 class="text-xl font-bold mb-1" data-translate-key="process-1-title">Elige tu modalidad</h3>
+                        <p data-translate-key="process-1-text">Las consultas duran 30 minutos. Puedes optar por una sesión <strong>presencial</strong> en mi consultorio de CABA o <strong>virtual</strong> por videollamada, según tu comodidad.</p>
                     </div>
                 </div>
                 <div class="flex items-start mb-8 fade-in">
                     <div class="flex items-center justify-center bg-color-acento text-white w-10 h-10 rounded-full font-bold text-xl mr-6 flex-shrink-0">2</div>
                     <div>
-                        <h3 class="text-xl font-bold mb-1">Agenda tu turno</h3>
-                        <p>Haz clic en el enlace de Calendly para ver mis horarios disponibles y reservar el que mejor se ajuste a tu agenda. La gestión es 100% online.</p>
-                           <a href="https://calendly.com/mgbustosvillar/30min" target="_blank" class="text-color-acento font-semibold hover:underline mt-2 inline-block">Agendar ahora →</a>
+                        <h3 class="text-xl font-bold mb-1" data-translate-key="process-2-title">Agenda tu turno</h3>
+                        <p data-translate-key="process-2-text">Haz clic en el enlace de Calendly para ver mis horarios disponibles y reservar el que mejor se ajuste a tu agenda. La gestión es 100% online.</p>
+                           <a href="https://calendly.com/mgbustosvillar/30min" target="_blank" class="text-color-acento font-semibold hover:underline mt-2 inline-block" data-translate-key="process-2-link">Agendar ahora →</a>
                     </div>
                 </div>
                 <div class="flex items-start fade-in">
                     <div class="flex items-center justify-center bg-color-acento text-white w-10 h-10 rounded-full font-bold text-xl mr-6 flex-shrink-0">3</div>
                     <div>
-                        <h3 class="text-xl font-bold mb-1">Recibe la confirmación</h3>
-                        <p>Una vez confirmada la reserva, recibirás un correo electrónico con todos los detalles y las instrucciones para nuestra sesión.</p>
+                        <h3 class="text-xl font-bold mb-1" data-translate-key="process-3-title">Recibe la confirmación</h3>
+                        <p data-translate-key="process-3-text">Una vez confirmada la reserva, recibirás un correo electrónico con todos los detalles y las instrucciones para nuestra sesión.</p>
                     </div>
                 </div>
             </div>
@@ -201,35 +209,35 @@
         <!-- Preguntas Frecuentes (adaptado del index.html original) -->
         <section id="faq" class="max-w-2xl mx-auto mb-16 md:mb-24">
             <div class="text-center mb-12 fade-in">
-                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Preguntas Frecuentes</h2>
-                <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed">Aquí resuelvo algunas de las dudas más comunes para tu tranquilidad y claridad.</p>
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" data-translate-key="faq-title">Preguntas Frecuentes</h2>
+                <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed" data-translate-key="faq-subtitle">Aquí resuelvo algunas de las dudas más comunes para tu tranquilidad y claridad.</p>
             </div>
             <div class="space-y-4">
                 <div class="faq-item care-card fade-in">
                     <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-color-texto-oscuro">
-                        <span>¿Cuál es el marco de la atención?</span>
+                        <span data-translate-key="faq-1-q">¿Cuál es el marco de la atención?</span>
                         <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="faq-answer px-5 pb-5 text-color-texto-medio">
-                        <p>Mi atención es estrictamente médica, profesional y ética, rigiéndose por las normativas vigentes en Argentina (Ley 17.132). Este es un espacio de psiquiatría clínica y no se ofrecen prácticas espirituales o terapias alternativas.</p>
+                        <p data-translate-key="faq-1-a">Mi atención es estrictamente médica, profesional y ética, rigiéndose por las normativas vigentes en Argentina (Ley 17.132). Este es un espacio de psiquiatría clínica y no se ofrecen prácticas espirituales o terapias alternativas.</p>
                     </div>
                 </div>
                 <div class="faq-item care-card fade-in">
                     <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-color-texto-oscuro">
-                        <span>¿Cómo se definen los honorarios?</span>
+                        <span data-translate-key="faq-2-q">¿Cómo se definen los honorarios?</span>
                         <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="faq-answer px-5 pb-5 text-color-texto-medio">
-                        <p>Los honorarios se informan de manera personalizada y transparente durante la primera consulta. Se emite el correspondiente comprobante fiscal (factura C) según el régimen de monotributo.</p>
+                        <p data-translate-key="faq-2-a">Los honorarios se informan de manera personalizada y transparente durante la primera consulta. Se emite el correspondiente comprobante fiscal (factura C) según el régimen de monotributo.</p>
                     </div>
                 </div>
                    <div class="faq-item care-card fade-in">
                     <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-color-texto-oscuro">
-                        <span>¿Qué pasa si tengo una consulta administrativa?</span>
+                        <span data-translate-key="faq-3-q">¿Qué pasa si tengo una consulta administrativa?</span>
                         <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="faq-answer px-5 pb-5 text-color-texto-medio">
-                        <p>Para cualquier duda no clínica (ej. sobre facturación o cambios de turno fuera de Calendly), puedes escribirme a mi correo electrónico o usar el formulario de contacto del sitio web. El enlace para agendar es exclusivamente para las consultas médicas.</p>
+                        <p data-translate-key="faq-3-a">Para cualquier duda no clínica (ej. sobre facturación o cambios de turno fuera de Calendly), puedes escribirme a mi correo electrónico o usar el formulario de contacto del sitio web. El enlace para agendar es exclusivamente para las consultas médicas.</p>
                     </div>
                 </div>
             </div>
@@ -238,11 +246,11 @@
         <!-- Contacto -->
         <section id="contacto" class="py-16 md:py-24 text-center">
             <div class="fade-in">
-                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Contactame</h2>
-                <p class="max-w-3xl mx-auto text-lg leading-relaxed mb-8">
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" data-translate-key="contact-title">Contactame</h2>
+                <p class="max-w-3xl mx-auto text-lg leading-relaxed mb-8" data-translate-key="contact-subtitle">
                     Si tenés alguna duda o querés iniciar tu proceso, no dudes en contactarme.
                 </p>
-                <a href="mailto:mbustosvillar@gmail.com" class="btn-care-primary" aria-label="Enviar un correo electrónico a Martín Bustos Villar">Enviar un Email</a>
+                <a href="mailto:mbustosvillar@gmail.com" class="btn-care-primary" aria-label="Enviar un correo electrónico a Martín Bustos Villar" data-translate-key="contact-button">Enviar un Email</a>
             </div>
         </section>
 
@@ -250,12 +258,12 @@
 
     <footer class="py-12 bg-color-texto-oscuro text-color-fondo text-center">
         <div class="container mx-auto px-6 max-w-4xl">
-            <p class="font-bold text-color-fondo">Martín Bustos Villar</p>
-            <p class="text-sm text-color-fondo/70">MN 179308 – Médico Residente de Psiquiatría</p>
-            <p class="text-sm text-color-fondo/70 mt-2">Consultorio en Ciudad Autónoma de Buenos Aires y Atención Virtual</p>
-            <p class="text-sm text-color-fondo/70 mt-4">Para consultas administrativas: <a href="mailto:mbustosvillar@gmail.com" class="font-semibold text-color-acento hover:underline">mbustosvillar@gmail.com</a></p>
-            <p class="text-sm tracking-wider mt-4">Parte de Lux Animæ | NectarLux Care © 2025. Todos los derechos reservados.</p> <!-- Footer actualizado -->
-            <p class="font-display text-xl mt-2 tracking-wider">SACRA SIT MIHI LUX</p> <!-- Mantra añadido -->
+            <p class="font-bold text-color-fondo" data-translate-key="footer-title">Martín Bustos Villar</p>
+            <p class="text-sm text-color-fondo/70" data-translate-key="footer-subtitle">MN 179308 – Médico Residente de Psiquiatría</p>
+            <p class="text-sm text-color-fondo/70 mt-2" data-translate-key="footer-text">Consultorio en Ciudad Autónoma de Buenos Aires y Atención Virtual</p>
+            <p class="text-sm text-color-fondo/70 mt-4"><span data-translate-key="footer-admin">Para consultas administrativas: </span><a href="mailto:mbustosvillar@gmail.com" class="font-semibold text-color-acento hover:underline">mbustosvillar@gmail.com</a></p>
+            <p class="text-sm tracking-wider mt-4" data-translate-key="footer-copyright">Parte de Lux Animæ | NectarLux Care © 2025. Todos los derechos reservados.</p>
+            <p class="font-display text-xl mt-2 tracking-wider" data-translate-key="footer-mantra">SACRA SIT MIHI LUX</p>
         </div>
     </footer>
 
@@ -323,11 +331,252 @@
                         answer.classList.add('open');
                         arrow.style.transform = 'rotate(180deg)';
                     } else {
-                           // Si ya estaba abierta, solo se cierra (ya manejado por el bucle anterior)
-                           arrow.style.transform = 'rotate(0deg)';
+                            // Si ya estaba abierta, solo se cierra (ya manejado por el bucle anterior)
+                            arrow.style.transform = 'rotate(0deg)';
                     }
                 });
             });
+
+
+            // --- Nuevo script de traducción ---
+
+            // Objeto con todas las traducciones de la página
+            const translations = {
+                'es': {
+                    'header-title': 'Martín Bustos Villar',
+                    'hero-title': 'Martín Bustos Villar',
+                    'hero-subtitle': 'Psiquiatría Integral – Médico Residente',
+                    'hero-text': 'Mi compromiso es brindarte un acompañamiento terapéutico integral y personalizado. Mi enfoque se centra en tu bienestar, en un marco de confidencialidad absoluta.',
+                    'hero-button': '➡️ Solicitar Consulta',
+                    'nav-home': 'Inicio',
+                    'nav-approach': 'Mi Enfoque',
+                    'nav-process': 'Proceso',
+                    'nav-faq': 'FAQ',
+                    'nav-contact': 'Contacto',
+                    'focus-title': 'Mi Enfoque Terapéutico',
+                    'focus-subtitle': 'Mi práctica se basa en tres pilares fundamentales para asegurar un tratamiento completo y adaptado a tus necesidades.',
+                    'card-1-title': 'Evaluación Clínica',
+                    'card-1-text': 'Una entrevista profunda para comprender tu situación particular y definir juntos el mejor camino a seguir.',
+                    'card-2-title': 'Seguimiento Farmacológico',
+                    'card-2-text': 'Un acompañamiento cuidadoso y actualizado, cuando sea necesario, para potenciar tu bienestar emocional.',
+                    'card-3-title': 'Psicoeducación',
+                    'card-3-text': 'Te brindo herramientas e información para que comprendas mejor tus procesos y participes activamente en tu recuperación.',
+                    'process-title': 'Proceso de Consulta',
+                    'process-subtitle': 'Agendar tu primera entrevista es un proceso simple y directo. Aquí te explico cómo funciona.',
+                    'process-1-title': 'Elige tu modalidad',
+                    'process-1-text': 'Las consultas duran 30 minutos. Puedes optar por una sesión presencial en mi consultorio de CABA o virtual por videollamada, según tu comodidad.',
+                    'process-2-title': 'Agenda tu turno',
+                    'process-2-text': 'Haz clic en el enlace de Calendly para ver mis horarios disponibles y reservar el que mejor se ajuste a tu agenda. La gestión es 100% online.',
+                    'process-2-link': 'Agendar ahora →',
+                    'process-3-title': 'Recibe la confirmación',
+                    'process-3-text': 'Una vez confirmada la reserva, recibirás un correo electrónico con todos los detalles y las instrucciones para nuestra sesión.',
+                    'faq-title': 'Preguntas Frecuentes',
+                    'faq-subtitle': 'Aquí resuelvo algunas de las dudas más comunes para tu tranquilidad y claridad.',
+                    'faq-1-q': '¿Cuál es el marco de la atención?',
+                    'faq-1-a': 'Mi atención es estrictamente médica, profesional y ética, rigiéndose por las normativas vigentes en Argentina (Ley 17.132). Este es un espacio de psiquiatría clínica y no se ofrecen prácticas espirituales o terapias alternativas.',
+                    'faq-2-q': '¿Cómo se definen los honorarios?',
+                    'faq-2-a': 'Los honorarios se informan de manera personalizada y transparente durante la primera consulta. Se emite el correspondiente comprobante fiscal (factura C) según el régimen de monotributo.',
+                    'faq-3-q': '¿Qué pasa si tengo una consulta administrativa?',
+                    'faq-3-a': 'Para cualquier duda no clínica (ej. sobre facturación o cambios de turno fuera de Calendly), puedes escribirme a mi correo electrónico o usar el formulario de contacto del sitio web. El enlace para agendar es exclusivamente para las consultas médicas.',
+                    'contact-title': 'Contactame',
+                    'contact-subtitle': 'Si tenés alguna duda o querés iniciar tu proceso, no dudes en contactarme.',
+                    'contact-button': 'Enviar un Email',
+                    'footer-title': 'Martín Bustos Villar',
+                    'footer-subtitle': 'MN 179308 – Médico Residente de Psiquiatría',
+                    'footer-text': 'Consultorio en Ciudad Autónoma de Buenos Aires y Atención Virtual',
+                    'footer-admin': 'Para consultas administrativas: ',
+                    'footer-copyright': 'Parte de Lux Animæ | NectarLux Care © 2025. Todos los derechos reservados.',
+                    'footer-mantra': 'SACRA SIT MIHI LUX'
+                },
+                'en': {
+                    'header-title': 'Martín Bustos Villar',
+                    'hero-title': 'Martín Bustos Villar',
+                    'hero-subtitle': 'Holistic Psychiatry – Resident Doctor',
+                    'hero-text': 'My commitment is to provide you with comprehensive and personalized therapeutic support. My approach is centered on your well-being, within a framework of absolute confidentiality.',
+                    'hero-button': '➡️ Request a Consultation',
+                    'nav-home': 'Home',
+                    'nav-approach': 'My Approach',
+                    'nav-process': 'Process',
+                    'nav-faq': 'FAQ',
+                    'nav-contact': 'Contact',
+                    'focus-title': 'My Therapeutic Approach',
+                    'focus-subtitle': 'My practice is based on three fundamental pillars to ensure a complete treatment tailored to your needs.',
+                    'card-1-title': 'Clinical Evaluation',
+                    'card-1-text': 'A thorough interview to understand your specific situation and define the best path forward together.',
+                    'card-2-title': 'Pharmacological Monitoring',
+                    'card-2-text': 'Careful and up-to-date support, when necessary, to enhance your emotional well-being.',
+                    'card-3-title': 'Psychoeducation',
+                    'card-3-text': 'I provide you with tools and information so you can better understand your processes and actively participate in your recovery.',
+                    'process-title': 'Consultation Process',
+                    'process-subtitle': 'Scheduling your first interview is a simple and straightforward process. Here\'s how it works.',
+                    'process-1-title': 'Choose your modality',
+                    'process-1-text': 'Consultations last 30 minutes. You can choose a face-to-face session at my office in CABA or a virtual session via video call, depending on your convenience.',
+                    'process-2-title': 'Schedule your appointment',
+                    'process-2-text': 'Click the Calendly link to view my available times and book the one that best fits your schedule. All management is 100% online.',
+                    'process-2-link': 'Schedule now →',
+                    'process-3-title': 'Receive confirmation',
+                    'process-3-text': 'Once the booking is confirmed, you will receive an email with all the details and instructions for our session.',
+                    'faq-title': 'Frequently Asked Questions',
+                    'faq-subtitle': 'Here are answers to some of the most common questions for your peace of mind and clarity.',
+                    'faq-1-q': 'What is the framework of the care?',
+                    'faq-1-a': 'My care is strictly medical, professional, and ethical, governed by current regulations in Argentina (Law 17.132). This is a space for clinical psychiatry, and no spiritual practices or alternative therapies are offered.',
+                    'faq-2-q': 'How are fees determined?',
+                    'faq-2-a': 'Fees are communicated in a personalized and transparent manner during the first consultation. The corresponding tax receipt (factura C) is issued under the monotributo regime.',
+                    'faq-3-q': 'What if I have an administrative question?',
+                    'faq-3-a': 'For any non-clinical questions (e.g., about billing or changing appointments outside of Calendly), you can email me or use the website\'s contact form. The scheduling link is exclusively for medical consultations.',
+                    'contact-title': 'Contact Me',
+                    'contact-subtitle': 'If you have any questions or want to start your process, don\'t hesitate to contact me.',
+                    'contact-button': 'Send an Email',
+                    'footer-title': 'Martín Bustos Villar',
+                    'footer-subtitle': 'MN 179308 – Resident Doctor of Psychiatry',
+                    'footer-text': 'Office in Autonomous City of Buenos Aires and Virtual Care',
+                    'footer-admin': 'For administrative inquiries: ',
+                    'footer-copyright': 'Part of Lux Animæ | NectarLux Care © 2025. All rights reserved.',
+                    'footer-mantra': 'SACRA SIT MIHI LUX'
+                },
+                'fr': {
+                    'header-title': 'Martín Bustos Villar',
+                    'hero-title': 'Martín Bustos Villar',
+                    'hero-subtitle': 'Psychiatrie Intégrale – Médecin Résident',
+                    'hero-text': 'Mon engagement est de vous offrir un accompagnement thérapeutique complet et personnalisé. Mon approche est axée sur votre bien-être, dans un cadre de confidentialité absolue.',
+                    'hero-button': '➡️ Demander une Consultation',
+                    'nav-home': 'Accueil',
+                    'nav-approach': 'Mon Approche',
+                    'nav-process': 'Processus',
+                    'nav-faq': 'FAQ',
+                    'nav-contact': 'Contact',
+                    'focus-title': 'Mon Approche Thérapeutique',
+                    'focus-subtitle': 'Ma pratique repose sur trois piliers fondamentaux pour garantir un traitement complet et adapté à vos besoins.',
+                    'card-1-title': 'Évaluation Clinique',
+                    'card-1-text': 'Un entretien approfondi pour comprendre votre situation particulière et définir ensemble le meilleur chemin à suivre.',
+                    'card-2-title': 'Suivi Pharmacologique',
+                    'card-2-text': 'Un accompagnement attentif et actualisé, si nécessaire, pour améliorer votre bien-être émotionnel.',
+                    'card-3-title': 'Psychoéducation',
+                    'card-3-text': 'Je vous fournis des outils et des informations pour que vous compreniez mieux vos processus et participiez activement à votre rétablissement.',
+                    'process-title': 'Processus de Consultation',
+                    'process-subtitle': 'Prendre rendez-vous pour votre premier entretien est un processus simple et direct. Voici comment cela fonctionne.',
+                    'process-1-title': 'Choisissez votre modalité',
+                    'process-1-text': 'Les consultations durent 30 minutes. Vous pouvez opter pour une session en personne dans mon cabinet à CABA ou une session virtuelle par appel vidéo, selon votre convenance.',
+                    'process-2-title': 'Prenez votre rendez-vous',
+                    'process-2-text': 'Cliquez sur le lien Calendly pour voir mes disponibilités et réserver celle qui vous convient le mieux. La gestion est 100% en ligne.',
+                    'process-2-link': 'Prendre rendez-vous →',
+                    'process-3-title': 'Recevez la confirmation',
+                    'process-3-text': 'Une fois la réservation confirmée, vous recevrez un courriel avec tous les détails et les instructions pour notre session.',
+                    'faq-title': 'Questions Fréquentes',
+                    'faq-subtitle': 'Voici les réponses à certaines des questions les plus courantes pour votre tranquillité et votre clarté.',
+                    'faq-1-q': 'Quel est le cadre de la prise en charge?',
+                    'faq-1-a': 'Ma prise en charge est strictement médicale, professionnelle et éthique, régie par les réglementations en vigueur en Argentine (Loi 17.132). C\'est un espace de psychiatrie clinique, et aucune pratique spirituelle ou thérapie alternative n\'est proposée.',
+                    'faq-2-q': 'Comment sont déterminés les honoraires?',
+                    'faq-2-a': 'Les honoraires sont communiqués de manière personnalisée et transparente lors de la première consultation. La facture fiscale correspondante (factura C) est émise sous le régime du monotributo.',
+                    'faq-3-q': 'Que se passe-t-il si j\'ai une question administrative?',
+                    'faq-3-a': 'Pour toute question non clinique (par exemple, concernant la facturation ou les changements de rendez-vous en dehors de Calendly), vous pouvez m\'écrire à mon adresse e-mail ou utiliser le formulaire de contact du site web. Le lien de réservation est exclusivement pour les consultations médicales.',
+                    'contact-title': 'Contactez-moi',
+                    'contact-subtitle': 'Si vous avez des questions ou souhaitez commencer votre processus, n\'hésitez pas à me contacter.',
+                    'contact-button': 'Envoyer un Email',
+                    'footer-title': 'Martín Bustos Villar',
+                    'footer-subtitle': 'MN 179308 – Médecin Résident de Psychiatrie',
+                    'footer-text': 'Cabinet dans la Ville Autonome de Buenos Aires et Soins Virtuels',
+                    'footer-admin': 'Pour les questions administratives: ',
+                    'footer-copyright': 'Partie de Lux Animæ | NectarLux Care © 2025. Tous droits réservés.',
+                    'footer-mantra': 'SACRA SIT MIHI LUX'
+                },
+                'pt': {
+                    'header-title': 'Martín Bustos Villar',
+                    'hero-title': 'Martín Bustos Villar',
+                    'hero-subtitle': 'Psiquiatria Integral – Médico Residente',
+                    'hero-text': 'Meu compromisso é oferecer um acompanhamento terapêutico integral e personalizado. Minha abordagem se concentra em seu bem-estar, em um ambiente de confidencialidade absoluta.',
+                    'hero-button': '➡️ Solicitar Consulta',
+                    'nav-home': 'Início',
+                    'nav-approach': 'Minha Abordagem',
+                    'nav-process': 'Processo',
+                    'nav-faq': 'FAQ',
+                    'nav-contact': 'Contato',
+                    'focus-title': 'Minha Abordagem Terapêutica',
+                    'focus-subtitle': 'Minha prática se baseia em três pilares fundamentais para garantir um tratamento completo e adaptado às suas necessidades.',
+                    'card-1-title': 'Avaliação Clínica',
+                    'card-1-text': 'Uma entrevista aprofundada para entender sua situação particular e definir juntos o melhor caminho a seguir.',
+                    'card-2-title': 'Acompanhamento Farmacológico',
+                    'card-2-text': 'Um acompanhamento cuidadoso e atualizado, quando necessário, para potencializar seu bem-estar emocional.',
+                    'card-3-title': 'Psicoeducação',
+                    'card-3-text': 'Eu forneço ferramentas e informações para que você compreenda melhor seus processos e participe ativamente de sua recuperação.',
+                    'process-title': 'Processo de Consulta',
+                    'process-subtitle': 'Agendar sua primeira consulta é um processo simples e direto. Aqui, eu explico como funciona.',
+                    'process-1-title': 'Escolha sua modalidade',
+                    'process-1-text': 'As consultas duram 30 minutos. Você pode optar por uma sessão presencial em meu consultório em CABA ou virtual por videochamada, conforme sua conveniência.',
+                    'process-2-title': 'Agende seu horário',
+                    'process-2-text': 'Clique no link do Calendly para ver meus horários disponíveis e reservar o que melhor se adapta à sua agenda. O gerenciamento é 100% online.',
+                    'process-2-link': 'Agendar agora →',
+                    'process-3-title': 'Receba a confirmação',
+                    'process-3-text': 'Após a confirmação da reserva, você receberá um e-mail com todos os detalhes e instruções para nossa sessão.',
+                    'faq-title': 'Perguntas Frequentes',
+                    'faq-subtitle': 'Aqui eu respondo a algumas das dúvidas mais comuns para sua tranquilidade e clareza.',
+                    'faq-1-q': 'Qual é a estrutura do atendimento?',
+                    'faq-1-a': 'Meu atendimento é estritamente médico, profissional e ético, regido pelas normas vigentes na Argentina (Lei 17.132). Este é um espaço de psiquiatria clínica e não são oferecidas práticas espirituais ou terapias alternativas.',
+                    'faq-2-q': 'Como são definidos os honorários?',
+                    'faq-2-a': 'Os honorários são informados de forma personalizada e transparente durante a primeira consulta. A nota fiscal correspondente (factura C) é emitida de acordo com o regime de monotributo.',
+                    'faq-3-q': 'E se eu tiver uma consulta administrativa?',
+                    'faq-3-a': 'Para qualquer dúvida não clínica (ex: sobre faturamento ou mudança de horário fora do Calendly), você pode me escrever para o meu e-mail ou usar o formulário de contato do site. O link para agendamento é exclusivamente para consultas médicas.',
+                    'contact-title': 'Entre em Contato',
+                    'contact-subtitle': 'Se você tiver alguma dúvida ou quiser iniciar seu processo, não hesite em me contatar.',
+                    'contact-button': 'Enviar um E-mail',
+                    'footer-title': 'Martín Bustos Villar',
+                    'footer-subtitle': 'MN 179308 – Médico Residente de Psiquiatria',
+                    'footer-text': 'Consultório na Cidade Autônoma de Buenos Aires e Atendimento Virtual',
+                    'footer-admin': 'Para dúvidas administrativas: ',
+                    'footer-copyright': 'Parte de Lux Animæ | NectarLux Care © 2025. Todos os direitos reservados.',
+                    'footer-mantra': 'SACRA SIT MIHI LUX'
+                }
+            };
+
+            const langButtons = document.querySelectorAll('.lang-btn');
+            
+            // Define la función para cambiar el idioma
+            function setLanguage(lang) {
+                // Actualiza los textos
+                document.querySelectorAll('[data-translate-key]').forEach(element => {
+                    const key = element.getAttribute('data-translate-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        element.textContent = translations[lang][key];
+                        // Si el elemento es un enlace, actualiza también el aria-label para accesibilidad
+                        if (element.tagName === 'A') {
+                             // Aquí se omite la actualización del aria-label para enlaces que no están en el menú de navegación
+                             const href = element.getAttribute('href');
+                             if (href !== 'https://luxanima-tawny.vercel.app/') {
+                                element.setAttribute('aria-label', translations[lang][key]);
+                             }
+                        }
+                    }
+                });
+                
+                // Actualiza el atributo lang del html para SEO y accesibilidad
+                document.documentElement.lang = lang;
+                
+                // Actualiza los estilos de los botones
+                langButtons.forEach(btn => {
+                    btn.classList.remove('font-bold', 'text-color-acento');
+                    btn.classList.add('hover:text-color-acento');
+                });
+                const selectedButton = document.getElementById(`lang-${lang}`);
+                if (selectedButton) {
+                    selectedButton.classList.add('font-bold', 'text-color-acento');
+                    selectedButton.classList.remove('hover:text-color-acento');
+                }
+
+                // Guarda el idioma en el localStorage para recordar la preferencia del usuario
+                localStorage.setItem('preferredLang', lang);
+            }
+
+            // Agrega event listeners a los botones de idioma
+            langButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.id.replace('lang-', '');
+                    setLanguage(lang);
+                });
+            });
+
+            // Carga el idioma preferido del usuario si existe, si no, usa 'es' por defecto
+            const storedLang = localStorage.getItem('preferredLang') || 'es';
+            setLanguage(storedLang);
         });
     </script>
 </body>
